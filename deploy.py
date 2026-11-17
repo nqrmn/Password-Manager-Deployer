@@ -75,15 +75,13 @@ st.markdown("<br>", unsafe_allow_html=True)
 #  HIER DATEIPFAD EINFÜGEN (LÜCKE FÜR DEINE DATEI)
 # ======================================================================
 # Trage hier den relativen oder absoluten Pfad zu der Datei ein,
-# die heruntergeladen werden soll (z.B. eine .zip, .exe oder .dmg Datei).
-FILE_TO_DOWNLOAD = 
+# die heruntergeladen werden soll (z.B. eine .zip, .exe oder .dmg Datei). 
 # ======================================================================
 
 col_btn1, col_btn2, col_btn3 = st.columns([1, 2, 1])
 
 DOWNLOAD_URL = (
-    "https://github.com/nqrmn/Password-Manger-Deployer/"
-    "releases/download/v1.0.0/Password Manager.zip"
+   "https://github.com/nqrmn/Password-Manager-Deployer/releases/download/v.1/Password.Manager.zip"
 )
 
 col_btn1, col_btn2, col_btn3 = st.columns([1, 2, 1])
