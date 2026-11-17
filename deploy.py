@@ -65,7 +65,7 @@ with col2:
     )
 
     st.markdown(
-        """
+        f"""
         <div style="display: flex; justify-content: center;">
             <img src="{icon_url}" width="180">
         </div>
