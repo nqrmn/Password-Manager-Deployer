@@ -76,26 +76,21 @@ st.markdown("<br>", unsafe_allow_html=True)
 # ======================================================================
 # Trage hier den relativen oder absoluten Pfad zu der Datei ein,
 # die heruntergeladen werden soll (z.B. eine .zip, .exe oder .dmg Datei).
-FILE_TO_DOWNLOAD = "PasswortManager_Installer.zip"  # <-- HIER PFAD ANPASSEN
+FILE_TO_DOWNLOAD = 
 # ======================================================================
 
 col_btn1, col_btn2, col_btn3 = st.columns([1, 2, 1])
 
+DOWNLOAD_URL = (
+    "https://github.com/nqrmn/Password-Manger-Deployer/"
+    "releases/download/v1.0.0/Password Manager.zip"
+)
+
+col_btn1, col_btn2, col_btn3 = st.columns([1, 2, 1])
+
 with col_btn2:
-    file_path = Path(FILE_TO_DOWNLOAD)
-
-    if file_path.exists():
-        with open(file_path, "rb") as file:
-            file_bytes = file.read()
-
-        st.download_button(
-            label="📥 Datei herunterladen",
-            data=file_bytes,
-            file_name=file_path.name,
-            mime="application/octet-stream",
-            use_container_width=True
-        )
-    else:
-        # Falls die Zieldatei (noch) nicht existiert, wird ein Info-Hinweis angezeigt
-        st.error(f"❌ Datei nicht gefunden: `{FILE_TO_DOWNLOAD}`")
-        st.info("Bitte passe den `FILE_TO_DOWNLOAD`-Pfad im Code an und lege die Datei bereit.")
+    st.link_button(
+        "📥 Datei herunterladen",
+        DOWNLOAD_URL,
+        use_container_width=True
+    )
