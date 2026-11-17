@@ -59,13 +59,11 @@ st.markdown("<br>", unsafe_allow_html=True)
 col1, col2, col3 = st.columns([1, 2, 1])
 
 with col2:
-    icon_path = "https://github.com/nqrmn/Password-Manager-Deployer/releases/download/v.2/Icon.png"
-    
-    if icon_path.exists():
-        # Bild wird zentriert und in passender Größe angezeigt
-        st.image(str(icon_path), use_column_width=True)
-    else:
-        st.warning("⚠️ Die Datei 'icon.png' wurde im Verzeichnis nicht gefunden.")
+    icon_url = (
+        "https://github.com/nqrmn/Password-Manager-Deployer/"
+        "releases/download/v.2/Icon.png"
+    )
+    st.image(icon_url, width="stretch")
 
 st.markdown("<br>", unsafe_allow_html=True)
 
