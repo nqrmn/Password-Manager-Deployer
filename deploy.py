@@ -63,9 +63,18 @@ with col2:
         "https://github.com/nqrmn/Password-Manager-Deployer/"
         "releases/download/v.2/Icon.png"
     )
-    st.image(icon_url, width=180, center=True)
+
+    st.markdown(
+        """
+        <div style="display: flex; justify-content: center;">
+            <img src="{icon_url}" width="180">
+        </div>
+        """, unsafe_allow_html=True
+    )
 
 st.markdown("<br>", unsafe_allow_html=True)
+
+
 
 # ======================================================================
 #  DATEI-DOWNLOAD BEREICH
