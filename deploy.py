@@ -63,7 +63,7 @@ with col2:
         "https://github.com/nqrmn/Password-Manager-Deployer/"
         "releases/download/v.2/Icon.png"
     )
-    st.image(icon_url, width="stretch")
+    st.image(icon_url, width=180)
 
 st.markdown("<br>", unsafe_allow_html=True)
 
